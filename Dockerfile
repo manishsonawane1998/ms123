@@ -1,9 +1,3 @@
-FROM ubuntu
+FROM docker.io/httpd
 
-MAINTAINER pavanwankhade4u@gmail.com
-
-RUN apt-get update
-
-RUN apt-get install openjdk -y
-
-RUN echo "WELCOME" > /var/test.doc
+RUN systemctl start httpd
