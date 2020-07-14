@@ -1,3 +1,3 @@
 FROM docker.io/centos
 
-RUN yum install docker -y
+RUN yum install httpd -y
