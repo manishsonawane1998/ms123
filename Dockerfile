@@ -1,3 +1,3 @@
-FROM docker.io/httpd
+FROM docker.io/centos
 
-RUN systemctl start httpd
+RUN yum install docker -y
