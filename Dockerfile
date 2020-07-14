@@ -1,5 +1,11 @@
-FROM docker.io/centos
+FROM centos:latest
 
-RUN yum install httpd -y
+MAINTAINER NewstarCorporation
 
-CMD ["/sbin/httpd","-D", "FOREGROUND"]
+RUN yum -y install httpd
+
+COPY index.html /var/www/html/
+
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+
+EXPOSE 80
