@@ -1,4 +1,9 @@
-FROM docker.io/centos
+FROM ubuntu
 
-RUN yum install httpd -y
+MAINTAINER pavanwankhade4u@gmail.com
 
+RUN apt-get update
+
+RUN apt-get install openjdk -y
+
+RUN echo "WELCOME" > /var/test.doc
